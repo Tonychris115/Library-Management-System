@@ -173,11 +173,11 @@ public class Main {
 						            int val = getInput(0, 7);
 						            if(val == 1) {					          
 						            	System.out.println("Enter Borrower Name");
-						            	String n = sc.next();
+						            	String n = sc.nextLine();
 						            	System.out.println("Enter Borrower Email");
-						            	String em = sc.next();
+						            	String em = sc.nextLine();
 						            	System.out.println("Create password for Borrower");
-						            	String p = sc.next();
+						            	String p = sc.nextLine();
 						            	fun.addUser(n,em,p,"borrower");					          
 						            }
 						            else if(val == 2) {
@@ -195,7 +195,7 @@ public class Main {
 						            	System.out.println("Enter Book Id to change its status");
 						            	int c = sc.nextInt();
 						            	System.out.println("Enter status of Book");
-						            	String status = sc.next();					      
+						            	String status = sc.nextLine();					      
 						            	fun.changeStatusOfBook(c, status);
 						            } 
 						            else {
@@ -208,13 +208,13 @@ public class Main {
 			            }
 			            else if(choice == 2){ // Login as librarian
 			            	System.out.println("\nEnter username : ");
-			            	String username = sc.next();
+			            	String username = sc.nextLine();
 			            	System.out.println("\nEnter password : ");
-			            	String password = sc.next();
+			            	String password = sc.nextLine();
 			            	if(fun.login(username, password, "librarian")) {
 			            		while(true) {
 			            			System.out.println("\n-------------------------------------------------------");
-						            System.out.println("\tWelcome Librarian " + " ");
+						            System.out.println("\tWelcome Librarian ");
 						            System.out.println("-------------------------------------------------------");
 						            
 						            System.out.println("The following options are available\n");
@@ -230,11 +230,11 @@ public class Main {
 						            int val = getInput(0, 8);
 						            if(val == 1) {
 						            	System.out.println("Enter Borrower Name");
-						            	String n = sc.next();
+						            	String n = sc.nextLine();
 						            	System.out.println("Enter Borrower Email");
-						            	String em = sc.next();
+						            	String em = sc.nextLine();
 						            	System.out.println("Create password for Borrower");
-						            	String p = sc.next();
+						            	String p = sc.nextLine();
 						            	fun.addUser(n,em,p,"borrower");
 						            }
 						            else if(val == 2) {
@@ -279,13 +279,13 @@ public class Main {
 			            }
 			            else if(choice == 3){ // Login as admin
 			            	System.out.println("\nEnter username : ");
-			            	String username = sc.next();
+			            	String username = sc.nextLine();
 			            	System.out.println("\nEnter password : ");
-			            	String password = sc.next();
+			            	String password = sc.nextLine();
 			            	if(username.equals("admin") && password.equals("admin")) {
 			            		while(true) {
 			            			System.out.println("\n-------------------------------------------------------");
-						            System.out.println("\tWelcome Admin " + " ");
+						            System.out.println("\tWelcome Admin");
 						            System.out.println("-------------------------------------------------------");
 						            
 						            System.out.println("The following options are available\n");
@@ -298,9 +298,10 @@ public class Main {
 						            System.out.println("7. Add Clerk");
 						            System.out.println("8. Delete Clerk");
 						            System.out.println("9. Add Librarian");
-						            System.out.println("10. Delete Librarian");						            				            
-						            System.out.println("11. Logout");
-						            System.out.println("12. View Transactions");
+						            System.out.println("10. Delete Librarian");		
+						            System.out.println("11. View Transactions");
+						            System.out.println("12. Logout");
+						            
 						            
 						            System.out.println("-------------------------------------------------------\n");
 						            int val = getInput(0, 13);
@@ -312,9 +313,9 @@ public class Main {
 						            }
 						            else if(val == 3) { // Add book						            	
 						            	System.out.println("Enter Book Title :");
-						            	String title = sc.next();
+						            	String title = sc.nextLine();
 						            	System.out.println("Enter Author Name :");
-						            	String author = sc.next();
+						            	String author = sc.nextLine();
 						            	System.out.println("Enter Book Price :");
 						            	double price = sc.nextDouble();
 						            	fun.addBooks(title, author, price);
@@ -326,11 +327,11 @@ public class Main {
 						            }
 						            else if(val == 5) { // Add borrower
 						            	System.out.println("Enter Borrower Name");
-						            	String n = sc.next();
+						            	String n = sc.nextLine();
 						            	System.out.println("Enter Borrower Email");
-						            	String em = sc.next();
+						            	String em = sc.nextLine();
 						            	System.out.println("Create password for Borrower");
-						            	String p = sc.next();
+						            	String p = sc.nextLine();
 						            	fun.addUser(n,em,p,"borrower");
 						            }
 						            else if(val == 6) {// Delete borrower
@@ -340,11 +341,11 @@ public class Main {
 						            }
 						            else if(val == 7) { // Creating clerk account
 						            	System.out.println("Enter Clerk Name");
-						            	String n = sc.next();
+						            	String n = sc.nextLine();
 						            	System.out.println("Enter Clerk Email");
-						            	String em = sc.next();
+						            	String em = sc.nextLine();
 						            	System.out.println("Create password for Clerk");
-						            	String p = sc.next();
+						            	String p = sc.nextLine();
 						            	fun.addUser(n,em,p,"clerk");
 						            }
 						            else if(val == 8) { // Deleting clerk account
@@ -354,11 +355,11 @@ public class Main {
 						            }
 						            else if(val == 9) { // Creating Librarian account
 						            	System.out.println("Enter Librarian Name");
-						            	String n = sc.next();
+						            	String n = sc.nextLine();
 						            	System.out.println("Enter Librarian Email");
-						            	String em = sc.next();
+						            	String em = sc.nextLine();
 						            	System.out.println("Create password for Librarian");
-						            	String p = sc.next();
+						            	String p = sc.nextLine();
 						            	fun.addUser(n,em,p,"librarian");
 						            }
 						            else if(val == 10) { // Deleting Librarian account
@@ -366,7 +367,7 @@ public class Main {
 						            	int c = sc.nextInt();
 						            	fun.deleteLibrarian(c);
 						            }
-						            else if(val == 12) {
+						            else if(val == 11) {
 						            	fun.borrowedBooks();
 						            }
 						            else {
